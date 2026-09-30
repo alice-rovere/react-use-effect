@@ -6,10 +6,10 @@ export default function ThemeToggle() {
     return savedMode ? savedMode : "light";
   });
   const [text, setText] = useState("Switch to Dark Mode");
-  function handleIsLightMode() {
+  function handleMode() {
     setMode(mode === "light" ? "dark" : "light");
     localStorage.setItem("mode", JSON.stringify(mode));
-    if (mode !== "light") {
+    if (mode === "light") {
       setText("Switch to Light Mode");
     } else {
       setText("Switch to Dark Mode");
@@ -18,6 +18,8 @@ export default function ThemeToggle() {
 
   useEffect(() => {
     document.documentElement.setAttribute("data-bs-theme", mode);
+    return () =>
+      document.documentElement.setAttribute("data-bs-theme", "light");
   }, [mode]);
   return (
     <section>
@@ -47,7 +49,7 @@ export default function ThemeToggle() {
         <div className="border border-secondary-subtle shadow-sm p-3 ">
           <button
             value={mode}
-            onClick={handleIsLightMode}
+            onClick={handleMode}
             className="btn btn-info text-white rounded-5"
           >
             {text}
@@ -57,4 +59,4 @@ export default function ThemeToggle() {
     </section>
   );
 }
-// è tutto al contrarioooooooooooooooooooooo
+// è tutto al contrarioooooooooooooooooooooo!!!!!!!!!!
