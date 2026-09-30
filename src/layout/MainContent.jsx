@@ -3,7 +3,7 @@ import ThemeToggle from "../sections/ThemeToggle";
 import WindowSize from "../sections/WindowSize";
 export default function MainContent() {
   return (
-    <div className="container mt-4">
+    <div className="container my-4">
       <NotePad />
       <ThemeToggle />
       <WindowSize />
