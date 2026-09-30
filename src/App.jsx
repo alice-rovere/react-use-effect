@@ -1,14 +1,11 @@
-import Header from "./components/Header";
-import NotePad from "./components/NotePad";
-import ThemeToggle from "./components/ThemeToggle";
-import WindowSize from "./components/WindowSize";
+import Header from "./layout/Header";
+import MainContent from "./layout/MainContent";
+
 function App() {
   return (
     <>
       <Header />
-      <NotePad />
-      <ThemeToggle />
-      <WindowSize />
+      <MainContent />
     </>
   );
 }
