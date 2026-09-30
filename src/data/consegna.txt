@@ -1,0 +1,37 @@
+Ciao classe 
+esercizio di oggi: React useEffect
+nome repo: react-use-effect
+
+Esercizio 1 – Blocco note persistente
+
+Creare un componente NotePad con una <textarea>.
+Il testo digitato viene salvato in localStorage a ogni modifica.
+Al ricaricamento della pagina il testo viene recuperato da localStorage.
+Sotto la textarea viene mostrato il numero di caratteri.
+Il titolo della tab del browser mostra X caratteri.
+
+Bonus: un pulsante "Svuota" che cancella testo e chiave dal localStorage.
+
+
+Esercizio 2 – Theme switcher (light/dark)
+
+Creare un componente ThemeToggle con un pulsante che alterna tema chiaro e scuro.
+Lo stato theme viene salvato in localStorage e recuperato al caricamento.
+Un useEffect applica una classe al document per light e dark mode
+Il testo del pulsante cambia in base al tema attivo.
+
+Bonus: gestire la visibilità del componente con conditional rendering e aggiungere una cleanup function di useEffect() che ripristina il tema light quando il componente viene smontato. Verificare il comportamento.
+
+
+Esercizio 3 – Window size tracker
+
+Creare un componente WindowSize che mostra in tempo reale larghezza e altezza della finestra.
+Stato inizializzato con window.innerWidth e window.innerHeight.
+useEffect che registra un listener sull'evento resize.
+Mostrare anche un badge con il breakpoint corrente: mobile (< 768px), tablet (< 992px), desktop.
+Cleanup con removeEventListener: la funzione handler deve quindi essere dichiarata con un nome, non anonima.
+
+*Link Utili
+useEffect best practices: https://react.dev/learn/you-might-not-need-an-effect
+
+Buon lavoro! 😄
